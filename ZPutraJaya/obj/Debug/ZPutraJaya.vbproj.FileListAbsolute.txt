@@ -1,0 +1,16 @@
+E:\PENTING\Kerja\Penggajian\ZPutraJaya\ZPutraJaya\bin\Debug\ZPutraJaya.exe.config
+E:\PENTING\Kerja\Penggajian\ZPutraJaya\ZPutraJaya\bin\Debug\ZPutraJaya.exe
+E:\PENTING\Kerja\Penggajian\ZPutraJaya\ZPutraJaya\bin\Debug\ZPutraJaya.pdb
+E:\PENTING\Kerja\Penggajian\ZPutraJaya\ZPutraJaya\bin\Debug\ZPutraJaya.xml
+E:\PENTING\Kerja\Penggajian\ZPutraJaya\ZPutraJaya\obj\Debug\ZPutraJaya.vbprojResolveAssemblyReference.cache
+E:\PENTING\Kerja\Penggajian\ZPutraJaya\ZPutraJaya\obj\Debug\ZPutraJaya.FormAbsensi.resources
+E:\PENTING\Kerja\Penggajian\ZPutraJaya\ZPutraJaya\obj\Debug\ZPutraJaya.FormPegawai.resources
+E:\PENTING\Kerja\Penggajian\ZPutraJaya\ZPutraJaya\obj\Debug\ZPutraJaya.FormProduk.resources
+E:\PENTING\Kerja\Penggajian\ZPutraJaya\ZPutraJaya\obj\Debug\ZPutraJaya.Resources.resources
+E:\PENTING\Kerja\Penggajian\ZPutraJaya\ZPutraJaya\obj\Debug\ZPutraJaya.vbproj.GenerateResource.Cache
+E:\PENTING\Kerja\Penggajian\ZPutraJaya\ZPutraJaya\obj\Debug\ZPutraJaya.exe
+E:\PENTING\Kerja\Penggajian\ZPutraJaya\ZPutraJaya\obj\Debug\ZPutraJaya.xml
+E:\PENTING\Kerja\Penggajian\ZPutraJaya\ZPutraJaya\obj\Debug\ZPutraJaya.pdb
+E:\PENTING\Kerja\Penggajian\ZPutraJaya\ZPutraJaya\obj\Debug\ZPutraJaya.FormRecordPekerja.resources
+E:\PENTING\Kerja\Penggajian\ZPutraJaya\ZPutraJaya\obj\Debug\ZPutraJaya.FormGaji.resources
+E:\PENTING\Kerja\Penggajian\ZPutraJaya\ZPutraJaya\obj\Debug\ZPutraJaya.FormTabungan.resources
