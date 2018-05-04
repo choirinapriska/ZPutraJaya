@@ -13,6 +13,10 @@ Public Class FormProduk
     End Sub
 
     Sub ResetForm()
+        LabelStatus.Visible = False
+        LabelStatus.Text = "Add"
+
+        ShowProduk()
         GenerateIDProduk()
         TextNamaProduk.Text = String.Empty
         TextHargaProduk.Text = String.Empty
@@ -52,7 +56,7 @@ Public Class FormProduk
                                "('" + Text_IDProduk.Text + "'" +
                                ",'" + TextNamaProduk.Text + "'" +
                                "," + TextHargaProduk.Text + "" +
-                               ",'" + dt.ToString() + "'" +
+                               ",GETDATE()" +
                                ",0" +
                          ")"
 
@@ -63,7 +67,7 @@ Public Class FormProduk
                         "SET " +
                             "[Nama_Produk] = '" + TextNamaProduk.Text + "'" +
                             ",[Harga_Produk] = " + TextHargaProduk.Text + "" +
-                            ",[ModifiedDate] = '" + dt.ToString() + "'" +
+                            ",[ModifiedDate] = GETDATE()" +
                         " WHERE " +
                             " ID_Produk = '" + Text_IDProduk.Text + "'"
 
@@ -84,11 +88,7 @@ Public Class FormProduk
     End Sub
 
     Private Sub FormProduk_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        LabelStatus.Visible = False
-        LabelStatus.Text = "Add"
-
-        ShowProduk()
-        GenerateIDProduk()
+        ResetForm()
     End Sub
 
 
@@ -125,7 +125,7 @@ Public Class FormProduk
             query = "UPDATE [dbo].[Produk]" +
                     "SET " +
                         "[IsDeleted] = 1" +
-                        ",[ModifiedDate] = '" + dt.ToString() + "'" +
+                        ",[ModifiedDate] = GETDATE()" +
                      " WHERE " +
                         " ID_Produk = '" + LabelIDData.Text + "'"
             output = ActionQuery(query)

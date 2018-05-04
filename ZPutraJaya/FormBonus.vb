@@ -94,7 +94,7 @@
 
     Private Sub ComboPegawai_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboPegawai.SelectedIndexChanged
         Dim id As String = CType(ComboPegawai.SelectedItem, DataRowView).Row.Item("ID_Pegawai").ToString
-        ShowBonus(id)
+        'ShowBonus(id)
         If id <> String.Empty Then
             LabelIDPegawai.Text = id
             LabelNamaPegawai.Text = CType(ComboPegawai.SelectedItem, DataRowView).Row.Item("Nama_Pegawai").ToString

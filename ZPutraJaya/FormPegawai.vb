@@ -9,6 +9,10 @@
     End Sub
 
     Sub ResetForm()
+        LabelStatus.Visible = False
+        LabelStatus.Text = "Add"
+
+        ShowPegawai()
         GenerateIDPegawai()
         TextNamaPegawai.Text = String.Empty
         ComboJenisPegawai.SelectedItem = Nothing
@@ -29,11 +33,8 @@
     End Function
 
     Private Sub FormPegawai_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        LabelStatus.Visible = False
-        LabelStatus.Text = "Add"
 
-        ShowPegawai()
-        GenerateIDPegawai()
+        ResetForm()
     End Sub
 
     Private Sub ButtonSave_Click(sender As Object, e As EventArgs) Handles ButtonSave.Click
@@ -61,7 +62,7 @@
                            ",'" + TextNamaPegawai.Text + "'" +
                            ",'" + TextBoxAlamatPegawai.Text + "'" +
                            ",'" + ComboJenisPegawai.SelectedItem + "'" +
-                           ",'" + dt.ToString() + "'" +
+                           ",GETDATE()" +
                            ",0) "
                 label = "Data ID : " + Text_IDPegawai.Text + " berhasil ditambahkan"
 
@@ -70,7 +71,7 @@
                            "SET [Nama_Pegawai] = '" + TextNamaPegawai.Text + "'" +
                               ",[Alamat_Pegawai] = '" + TextBoxAlamatPegawai.Text + "'" +
                               ",[Jenis_Pegawai] = '" + ComboJenisPegawai.SelectedItem + "'" +
-                              ",[ModifiedDate] = '" + dt.ToString() + "'" +
+                              ",[ModifiedDate] = GETDATE()" +
                          "WHERE ID_Pegawai = '" + Text_IDPegawai.Text + "'"
 
                 label = "Data ID : " + Text_IDPegawai.Text + " berhasil diubah"
@@ -98,10 +99,10 @@
         If result = DialogResult.Yes Then
             query = "UPDATE [dbo].[Pegawai]" +
                            "SET  " +
-                              "[ModifiedDate] = '" + dt.ToString() + "'" +
+                              "[ModifiedDate] = GETDATE()" +
                               ",[IsDeleted] = 1" +
                          "WHERE ID_Pegawai = '" + LabelIDData.Text + "'"
-             
+
             output = ActionQuery(query)
 
             If (output = 1) Then
@@ -127,4 +128,6 @@
         TextBoxAlamatPegawai.Text = data.Cells(2).Value
         ComboJenisPegawai.SelectedItem = data.Cells(3).Value
     End Sub
+ 
+
 End Class

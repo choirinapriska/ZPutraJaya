@@ -52,7 +52,7 @@ Partial Class FormAbsensi
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!)
-        Me.Label5.Location = New System.Drawing.Point(69, 9)
+        Me.Label5.Location = New System.Drawing.Point(599, 25)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(194, 46)
         Me.Label5.TabIndex = 9
@@ -67,9 +67,9 @@ Partial Class FormAbsensi
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Location = New System.Drawing.Point(14, 71)
+        Me.GroupBox1.Location = New System.Drawing.Point(423, 95)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(336, 146)
+        Me.GroupBox1.Size = New System.Drawing.Size(538, 146)
         Me.GroupBox1.TabIndex = 55
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Form "
@@ -138,9 +138,9 @@ Partial Class FormAbsensi
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.ToolStripStatusLabel2, Me.ToolStripStatusLabel3, Me.LabelTanggal, Me.LabelStatus, Me.ToolStripStatusLabel4, Me.ToolStripStatusLabel5, Me.LabelIDData})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 506)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 704)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(361, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(1370, 22)
         Me.StatusStrip1.TabIndex = 81
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -189,9 +189,9 @@ Partial Class FormAbsensi
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.DataGridAbsensi)
-        Me.GroupBox2.Location = New System.Drawing.Point(14, 223)
+        Me.GroupBox2.Location = New System.Drawing.Point(423, 247)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(336, 276)
+        Me.GroupBox2.Size = New System.Drawing.Size(538, 375)
         Me.GroupBox2.TabIndex = 82
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Data"
@@ -201,23 +201,24 @@ Partial Class FormAbsensi
         Me.DataGridAbsensi.AllowUserToAddRows = False
         Me.DataGridAbsensi.AllowUserToDeleteRows = False
         Me.DataGridAbsensi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridAbsensi.Location = New System.Drawing.Point(6, 19)
+        Me.DataGridAbsensi.Location = New System.Drawing.Point(20, 36)
         Me.DataGridAbsensi.Name = "DataGridAbsensi"
         Me.DataGridAbsensi.ReadOnly = True
-        Me.DataGridAbsensi.Size = New System.Drawing.Size(316, 228)
+        Me.DataGridAbsensi.Size = New System.Drawing.Size(500, 309)
         Me.DataGridAbsensi.TabIndex = 12
         '
         'FormAbsensi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(361, 528)
+        Me.ClientSize = New System.Drawing.Size(1370, 726)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label5)
         Me.Name = "FormAbsensi"
         Me.Text = "Form Absensi"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)

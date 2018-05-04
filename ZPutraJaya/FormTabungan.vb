@@ -92,12 +92,16 @@
         End If
     End Sub
 
-    Private Sub ComboPegawai_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboPegawai.SelectedIndexChanged
+    Private Sub ComboPegawai_SelectedIndexChanged(sender As Object, e As EventArgs)
         Dim id As String = CType(ComboPegawai.SelectedItem, DataRowView).Row.Item("ID_Pegawai").ToString
-        ShowTabungan(id)
+        'ShowTabungan(id)
         If id <> String.Empty Then
             LabelIDPegawai.Text = id
             LabelNamaPegawai.Text = CType(ComboPegawai.SelectedItem, DataRowView).Row.Item("Nama_Pegawai").ToString
         End If
+    End Sub
+
+    Private Sub ShowTabungan(sender As Object, e As EventArgs) Handles ComboPegawai.SelectedIndexChanged
+
     End Sub
 End Class

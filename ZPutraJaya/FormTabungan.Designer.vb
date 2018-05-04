@@ -53,7 +53,7 @@ Partial Class FormTabungan
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.0!)
-        Me.Label6.Location = New System.Drawing.Point(168, 7)
+        Me.Label6.Location = New System.Drawing.Point(607, 44)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(208, 39)
         Me.Label6.TabIndex = 88
@@ -65,9 +65,9 @@ Partial Class FormTabungan
         Me.GroupBox1.Controls.Add(Me.LabelNamaPegawai)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Location = New System.Drawing.Point(296, 70)
+        Me.GroupBox1.Location = New System.Drawing.Point(772, 137)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(203, 88)
+        Me.GroupBox1.Size = New System.Drawing.Size(203, 120)
         Me.GroupBox1.TabIndex = 89
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Data Pegawai"
@@ -75,7 +75,7 @@ Partial Class FormTabungan
         'LabelIDPegawai
         '
         Me.LabelIDPegawai.AutoSize = True
-        Me.LabelIDPegawai.Location = New System.Drawing.Point(72, 26)
+        Me.LabelIDPegawai.Location = New System.Drawing.Point(72, 34)
         Me.LabelIDPegawai.Name = "LabelIDPegawai"
         Me.LabelIDPegawai.Size = New System.Drawing.Size(0, 13)
         Me.LabelIDPegawai.TabIndex = 73
@@ -83,7 +83,7 @@ Partial Class FormTabungan
         'LabelNamaPegawai
         '
         Me.LabelNamaPegawai.AutoSize = True
-        Me.LabelNamaPegawai.Location = New System.Drawing.Point(72, 58)
+        Me.LabelNamaPegawai.Location = New System.Drawing.Point(72, 75)
         Me.LabelNamaPegawai.Name = "LabelNamaPegawai"
         Me.LabelNamaPegawai.Size = New System.Drawing.Size(0, 13)
         Me.LabelNamaPegawai.TabIndex = 72
@@ -91,7 +91,7 @@ Partial Class FormTabungan
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(16, 58)
+        Me.Label5.Location = New System.Drawing.Point(16, 75)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(38, 13)
         Me.Label5.TabIndex = 71
@@ -100,7 +100,7 @@ Partial Class FormTabungan
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(16, 26)
+        Me.Label3.Location = New System.Drawing.Point(16, 34)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(18, 13)
         Me.Label3.TabIndex = 70
@@ -109,9 +109,9 @@ Partial Class FormTabungan
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.LabelStatus, Me.ToolStripStatusLabel2, Me.ToolStripStatusLabel3, Me.LabelIDData})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 452)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 704)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(528, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(1370, 22)
         Me.StatusStrip1.TabIndex = 90
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -165,7 +165,7 @@ Partial Class FormTabungan
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(9, 65)
+        Me.Label4.Location = New System.Drawing.Point(9, 72)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(40, 13)
         Me.Label4.TabIndex = 70
@@ -173,14 +173,14 @@ Partial Class FormTabungan
         '
         'TextBoxJumlah
         '
-        Me.TextBoxJumlah.Location = New System.Drawing.Point(63, 66)
+        Me.TextBoxJumlah.Location = New System.Drawing.Point(63, 73)
         Me.TextBoxJumlah.Name = "TextBoxJumlah"
         Me.TextBoxJumlah.Size = New System.Drawing.Size(113, 20)
         Me.TextBoxJumlah.TabIndex = 78
         '
         'ButtonSave
         '
-        Me.ButtonSave.Location = New System.Drawing.Point(182, 63)
+        Me.ButtonSave.Location = New System.Drawing.Point(182, 70)
         Me.ButtonSave.Name = "ButtonSave"
         Me.ButtonSave.Size = New System.Drawing.Size(75, 23)
         Me.ButtonSave.TabIndex = 71
@@ -194,9 +194,9 @@ Partial Class FormTabungan
         Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.TextBoxJumlah)
         Me.GroupBox2.Controls.Add(Me.ButtonSave)
-        Me.GroupBox2.Location = New System.Drawing.Point(27, 64)
+        Me.GroupBox2.Location = New System.Drawing.Point(469, 137)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(263, 94)
+        Me.GroupBox2.Size = New System.Drawing.Size(281, 120)
         Me.GroupBox2.TabIndex = 91
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Form"
@@ -204,9 +204,9 @@ Partial Class FormTabungan
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.DataGridTabungan)
-        Me.GroupBox3.Location = New System.Drawing.Point(27, 175)
+        Me.GroupBox3.Location = New System.Drawing.Point(469, 314)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(472, 261)
+        Me.GroupBox3.Size = New System.Drawing.Size(506, 261)
         Me.GroupBox3.TabIndex = 92
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Data"
@@ -220,14 +220,14 @@ Partial Class FormTabungan
         Me.DataGridTabungan.Location = New System.Drawing.Point(12, 32)
         Me.DataGridTabungan.Name = "DataGridTabungan"
         Me.DataGridTabungan.ReadOnly = True
-        Me.DataGridTabungan.Size = New System.Drawing.Size(445, 214)
+        Me.DataGridTabungan.Size = New System.Drawing.Size(488, 214)
         Me.DataGridTabungan.TabIndex = 73
         '
         'FormTabungan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(528, 474)
+        Me.ClientSize = New System.Drawing.Size(1370, 726)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.StatusStrip1)
@@ -235,6 +235,7 @@ Partial Class FormTabungan
         Me.Controls.Add(Me.GroupBox3)
         Me.Name = "FormTabungan"
         Me.Text = "Form Tabungan"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)

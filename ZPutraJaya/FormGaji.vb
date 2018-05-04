@@ -19,6 +19,8 @@
         DateTimeFirst.Value = lw
         DateTimeEnd.Value = td
         LabelDate.Text = td.ToString()
+        LabelIDPegawai.Text = String.Empty
+        LabelNamaPegawai.Text = String.Empty
     End Sub
 
     Sub AutoCompletePegawai()
@@ -121,7 +123,7 @@
 
                         total += jumlah
                     Next
-                    LabelTotal.Text = total
+                    LabelTotal.Text = (total - kasbontotal) + bonustotal
                 End With
             End If
 

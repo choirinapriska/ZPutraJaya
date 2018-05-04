@@ -84,11 +84,11 @@
         End If
     End Sub
 
-    Private Sub DataGridKasbon_Click(sender As Object, e As EventArgs)
+    Private Sub DataGridKasbon_Click(sender As Object, e As EventArgs) Handles DataGridKasbon.Click
         LabelIDData.Text = DataGridKasbon.CurrentRow.Cells(0).Value
     End Sub
 
-    Private Sub DataGridKasbon_DoubleClick(sender As Object, e As EventArgs)
+    Private Sub DataGridKasbon_DoubleClick(sender As Object, e As EventArgs) Handles DataGridKasbon.DoubleClick
         Dim data As DataGridViewRow = DataGridKasbon.CurrentRow
 
         LabelStatus.Text = "Edit"
@@ -99,7 +99,7 @@
 
     Private Sub ComboPegawai_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboPegawai.SelectedIndexChanged
         Dim id As String = CType(ComboPegawai.SelectedItem, DataRowView).Row.Item("ID_Pegawai").ToString
-        ShowKasbon(id)
+        'ShowKasbon(id)
         If id <> String.Empty Then
             LabelIDPegawai.Text = id
             LabelNamaPegawai.Text = CType(ComboPegawai.SelectedItem, DataRowView).Row.Item("Nama_Pegawai").ToString

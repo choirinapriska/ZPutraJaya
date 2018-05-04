@@ -37,12 +37,12 @@ Partial Class FormKasbon
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.LabelStatus = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel2 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.LabelTanggal = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel3 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.LabelIDData = New System.Windows.Forms.ToolStripStatusLabel()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.DataGridKasbon = New System.Windows.Forms.DataGridView()
-        Me.LabelTanggal = New System.Windows.Forms.ToolStripStatusLabel()
         Me.GroupBox1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -54,7 +54,7 @@ Partial Class FormKasbon
         '
         Me.TextBoxJumlah.Location = New System.Drawing.Point(63, 66)
         Me.TextBoxJumlah.Name = "TextBoxJumlah"
-        Me.TextBoxJumlah.Size = New System.Drawing.Size(113, 20)
+        Me.TextBoxJumlah.Size = New System.Drawing.Size(146, 20)
         Me.TextBoxJumlah.TabIndex = 78
         '
         'ComboPegawai
@@ -65,12 +65,12 @@ Partial Class FormKasbon
         Me.ComboPegawai.Items.AddRange(New Object() {"Masuk", "Ijin", "Alpa"})
         Me.ComboPegawai.Location = New System.Drawing.Point(63, 26)
         Me.ComboPegawai.Name = "ComboPegawai"
-        Me.ComboPegawai.Size = New System.Drawing.Size(194, 21)
+        Me.ComboPegawai.Size = New System.Drawing.Size(227, 21)
         Me.ComboPegawai.TabIndex = 73
         '
         'ButtonSave
         '
-        Me.ButtonSave.Location = New System.Drawing.Point(182, 63)
+        Me.ButtonSave.Location = New System.Drawing.Point(215, 63)
         Me.ButtonSave.Name = "ButtonSave"
         Me.ButtonSave.Size = New System.Drawing.Size(75, 23)
         Me.ButtonSave.TabIndex = 71
@@ -99,7 +99,7 @@ Partial Class FormKasbon
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.0!)
-        Me.Label6.Location = New System.Drawing.Point(170, 9)
+        Me.Label6.Location = New System.Drawing.Point(595, 32)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(160, 39)
         Me.Label6.TabIndex = 68
@@ -111,9 +111,9 @@ Partial Class FormKasbon
         Me.GroupBox1.Controls.Add(Me.LabelNamaPegawai)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Location = New System.Drawing.Point(296, 76)
+        Me.GroupBox1.Location = New System.Drawing.Point(785, 114)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(203, 88)
+        Me.GroupBox1.Size = New System.Drawing.Size(203, 103)
         Me.GroupBox1.TabIndex = 79
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Data Pegawai"
@@ -155,9 +155,9 @@ Partial Class FormKasbon
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.LabelStatus, Me.ToolStripStatusLabel2, Me.LabelTanggal, Me.ToolStripStatusLabel3, Me.LabelIDData})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 452)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 704)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(528, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(1370, 22)
         Me.StatusStrip1.TabIndex = 80
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -177,6 +177,11 @@ Partial Class FormKasbon
         Me.ToolStripStatusLabel2.Name = "ToolStripStatusLabel2"
         Me.ToolStripStatusLabel2.Size = New System.Drawing.Size(0, 17)
         '
+        'LabelTanggal
+        '
+        Me.LabelTanggal.Name = "LabelTanggal"
+        Me.LabelTanggal.Size = New System.Drawing.Size(0, 17)
+        '
         'ToolStripStatusLabel3
         '
         Me.ToolStripStatusLabel3.Name = "ToolStripStatusLabel3"
@@ -195,9 +200,9 @@ Partial Class FormKasbon
         Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.TextBoxJumlah)
         Me.GroupBox2.Controls.Add(Me.ButtonSave)
-        Me.GroupBox2.Location = New System.Drawing.Point(27, 70)
+        Me.GroupBox2.Location = New System.Drawing.Point(459, 108)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(263, 94)
+        Me.GroupBox2.Size = New System.Drawing.Size(296, 109)
         Me.GroupBox2.TabIndex = 81
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Form"
@@ -205,9 +210,9 @@ Partial Class FormKasbon
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.DataGridKasbon)
-        Me.GroupBox3.Location = New System.Drawing.Point(27, 181)
+        Me.GroupBox3.Location = New System.Drawing.Point(459, 236)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(472, 261)
+        Me.GroupBox3.Size = New System.Drawing.Size(529, 295)
         Me.GroupBox3.TabIndex = 82
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Data"
@@ -221,19 +226,14 @@ Partial Class FormKasbon
         Me.DataGridKasbon.Location = New System.Drawing.Point(12, 32)
         Me.DataGridKasbon.Name = "DataGridKasbon"
         Me.DataGridKasbon.ReadOnly = True
-        Me.DataGridKasbon.Size = New System.Drawing.Size(445, 214)
+        Me.DataGridKasbon.Size = New System.Drawing.Size(497, 214)
         Me.DataGridKasbon.TabIndex = 73
-        '
-        'LabelTanggal
-        '
-        Me.LabelTanggal.Name = "LabelTanggal"
-        Me.LabelTanggal.Size = New System.Drawing.Size(0, 17)
         '
         'FormKasbon
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(528, 474)
+        Me.ClientSize = New System.Drawing.Size(1370, 726)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.StatusStrip1)
@@ -241,6 +241,7 @@ Partial Class FormKasbon
         Me.Controls.Add(Me.Label6)
         Me.Name = "FormKasbon"
         Me.Text = "Form Kasbon"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)

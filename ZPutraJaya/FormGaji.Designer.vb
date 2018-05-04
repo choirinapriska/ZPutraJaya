@@ -23,7 +23,6 @@ Partial Class FormGaji
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.LabelKasbon = New System.Windows.Forms.Label()
         Me.LabelBonus = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -52,14 +51,13 @@ Partial Class FormGaji
         Me.ToolStripStatusLabel3 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.LabelIDData = New System.Windows.Forms.ToolStripStatusLabel()
         Me.GroupBoxRecord = New System.Windows.Forms.GroupBox()
+        Me.LabelTotal = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.DataGridViewRecord = New System.Windows.Forms.DataGridView()
         Me.ColumnNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnNamaProduk = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnKeterangan = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnTotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.LabelTotal = New System.Windows.Forms.Label()
-        Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.DataGridGaji, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -72,33 +70,16 @@ Partial Class FormGaji
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!)
-        Me.Label6.Location = New System.Drawing.Point(369, 9)
+        Me.Label6.Location = New System.Drawing.Point(625, 45)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(108, 46)
         Me.Label6.TabIndex = 27
         Me.Label6.Text = "GAJI"
         '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.LabelKasbon)
-        Me.GroupBox1.Controls.Add(Me.LabelBonus)
-        Me.GroupBox1.Controls.Add(Me.Label10)
-        Me.GroupBox1.Controls.Add(Me.Label11)
-        Me.GroupBox1.Controls.Add(Me.LabelIDPegawai)
-        Me.GroupBox1.Controls.Add(Me.LabelNamaPegawai)
-        Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Location = New System.Drawing.Point(318, 72)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(196, 147)
-        Me.GroupBox1.TabIndex = 85
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Data Pegawai"
-        '
         'LabelKasbon
         '
         Me.LabelKasbon.AutoSize = True
-        Me.LabelKasbon.Location = New System.Drawing.Point(57, 89)
+        Me.LabelKasbon.Location = New System.Drawing.Point(350, 32)
         Me.LabelKasbon.Name = "LabelKasbon"
         Me.LabelKasbon.Size = New System.Drawing.Size(0, 13)
         Me.LabelKasbon.TabIndex = 77
@@ -106,7 +87,7 @@ Partial Class FormGaji
         'LabelBonus
         '
         Me.LabelBonus.AutoSize = True
-        Me.LabelBonus.Location = New System.Drawing.Point(56, 121)
+        Me.LabelBonus.Location = New System.Drawing.Point(349, 64)
         Me.LabelBonus.Name = "LabelBonus"
         Me.LabelBonus.Size = New System.Drawing.Size(0, 13)
         Me.LabelBonus.TabIndex = 76
@@ -114,7 +95,7 @@ Partial Class FormGaji
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(9, 121)
+        Me.Label10.Location = New System.Drawing.Point(302, 64)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(37, 13)
         Me.Label10.TabIndex = 75
@@ -123,7 +104,7 @@ Partial Class FormGaji
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(9, 89)
+        Me.Label11.Location = New System.Drawing.Point(302, 32)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(43, 13)
         Me.Label11.TabIndex = 74
@@ -132,7 +113,7 @@ Partial Class FormGaji
         'LabelIDPegawai
         '
         Me.LabelIDPegawai.AutoSize = True
-        Me.LabelIDPegawai.Location = New System.Drawing.Point(56, 26)
+        Me.LabelIDPegawai.Location = New System.Drawing.Point(68, 32)
         Me.LabelIDPegawai.Name = "LabelIDPegawai"
         Me.LabelIDPegawai.Size = New System.Drawing.Size(0, 13)
         Me.LabelIDPegawai.TabIndex = 73
@@ -140,7 +121,7 @@ Partial Class FormGaji
         'LabelNamaPegawai
         '
         Me.LabelNamaPegawai.AutoSize = True
-        Me.LabelNamaPegawai.Location = New System.Drawing.Point(58, 58)
+        Me.LabelNamaPegawai.Location = New System.Drawing.Point(70, 64)
         Me.LabelNamaPegawai.Name = "LabelNamaPegawai"
         Me.LabelNamaPegawai.Size = New System.Drawing.Size(0, 13)
         Me.LabelNamaPegawai.TabIndex = 72
@@ -148,7 +129,7 @@ Partial Class FormGaji
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(9, 58)
+        Me.Label7.Location = New System.Drawing.Point(21, 64)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(38, 13)
         Me.Label7.TabIndex = 71
@@ -157,7 +138,7 @@ Partial Class FormGaji
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(9, 26)
+        Me.Label8.Location = New System.Drawing.Point(21, 32)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(18, 13)
         Me.Label8.TabIndex = 70
@@ -174,9 +155,9 @@ Partial Class FormGaji
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.Text_IDGaji)
         Me.GroupBox2.Controls.Add(Me.Label1)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 72)
+        Me.GroupBox2.Location = New System.Drawing.Point(74, 143)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(300, 147)
+        Me.GroupBox2.Size = New System.Drawing.Size(684, 147)
         Me.GroupBox2.TabIndex = 86
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Form"
@@ -184,7 +165,7 @@ Partial Class FormGaji
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(172, 28)
+        Me.Label4.Location = New System.Drawing.Point(375, 26)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(10, 13)
         Me.Label4.TabIndex = 90
@@ -193,23 +174,23 @@ Partial Class FormGaji
         'DateTimeEnd
         '
         Me.DateTimeEnd.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimeEnd.Location = New System.Drawing.Point(192, 26)
+        Me.DateTimeEnd.Location = New System.Drawing.Point(406, 24)
         Me.DateTimeEnd.Name = "DateTimeEnd"
-        Me.DateTimeEnd.Size = New System.Drawing.Size(87, 20)
+        Me.DateTimeEnd.Size = New System.Drawing.Size(115, 20)
         Me.DateTimeEnd.TabIndex = 40
         '
         'DateTimeFirst
         '
         Me.DateTimeFirst.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimeFirst.Location = New System.Drawing.Point(79, 26)
+        Me.DateTimeFirst.Location = New System.Drawing.Point(241, 24)
         Me.DateTimeFirst.Name = "DateTimeFirst"
-        Me.DateTimeFirst.Size = New System.Drawing.Size(87, 20)
+        Me.DateTimeFirst.Size = New System.Drawing.Size(117, 20)
         Me.DateTimeFirst.TabIndex = 39
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(6, 28)
+        Me.Label3.Location = New System.Drawing.Point(168, 26)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(49, 13)
         Me.Label3.TabIndex = 38
@@ -217,7 +198,7 @@ Partial Class FormGaji
         '
         'ButtonSave
         '
-        Me.ButtonSave.Location = New System.Drawing.Point(205, 114)
+        Me.ButtonSave.Location = New System.Drawing.Point(448, 85)
         Me.ButtonSave.Name = "ButtonSave"
         Me.ButtonSave.Size = New System.Drawing.Size(75, 23)
         Me.ButtonSave.TabIndex = 37
@@ -228,7 +209,7 @@ Partial Class FormGaji
         '
         Me.ComboPegawai.FormattingEnabled = True
         Me.ComboPegawai.Items.AddRange(New Object() {"Borongan ", "Harian"})
-        Me.ComboPegawai.Location = New System.Drawing.Point(79, 89)
+        Me.ComboPegawai.Location = New System.Drawing.Point(241, 87)
         Me.ComboPegawai.Name = "ComboPegawai"
         Me.ComboPegawai.Size = New System.Drawing.Size(201, 21)
         Me.ComboPegawai.TabIndex = 36
@@ -236,7 +217,7 @@ Partial Class FormGaji
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(6, 97)
+        Me.Label2.Location = New System.Drawing.Point(168, 95)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(48, 13)
         Me.Label2.TabIndex = 34
@@ -245,7 +226,7 @@ Partial Class FormGaji
         'Text_IDGaji
         '
         Me.Text_IDGaji.Enabled = False
-        Me.Text_IDGaji.Location = New System.Drawing.Point(79, 55)
+        Me.Text_IDGaji.Location = New System.Drawing.Point(241, 53)
         Me.Text_IDGaji.Name = "Text_IDGaji"
         Me.Text_IDGaji.Size = New System.Drawing.Size(201, 20)
         Me.Text_IDGaji.TabIndex = 33
@@ -253,7 +234,7 @@ Partial Class FormGaji
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 60)
+        Me.Label1.Location = New System.Drawing.Point(168, 58)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(18, 13)
         Me.Label1.TabIndex = 32
@@ -263,16 +244,16 @@ Partial Class FormGaji
         '
         Me.GroupBox3.Controls.Add(Me.ButtonDelete)
         Me.GroupBox3.Controls.Add(Me.DataGridGaji)
-        Me.GroupBox3.Location = New System.Drawing.Point(12, 225)
+        Me.GroupBox3.Location = New System.Drawing.Point(74, 330)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(500, 243)
+        Me.GroupBox3.Size = New System.Drawing.Size(684, 243)
         Me.GroupBox3.TabIndex = 87
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Data"
         '
         'ButtonDelete
         '
-        Me.ButtonDelete.Location = New System.Drawing.Point(402, 19)
+        Me.ButtonDelete.Location = New System.Drawing.Point(587, 19)
         Me.ButtonDelete.Name = "ButtonDelete"
         Me.ButtonDelete.Size = New System.Drawing.Size(75, 23)
         Me.ButtonDelete.TabIndex = 51
@@ -289,15 +270,15 @@ Partial Class FormGaji
         Me.DataGridGaji.Location = New System.Drawing.Point(24, 48)
         Me.DataGridGaji.Name = "DataGridGaji"
         Me.DataGridGaji.ReadOnly = True
-        Me.DataGridGaji.Size = New System.Drawing.Size(453, 176)
+        Me.DataGridGaji.Size = New System.Drawing.Size(638, 176)
         Me.DataGridGaji.TabIndex = 50
         '
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.ToolStripStatusLabel2, Me.LabelDate, Me.ToolStripStatusLabel3, Me.LabelIDData})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 500)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 704)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(909, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(1370, 22)
         Me.StatusStrip1.TabIndex = 88
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -331,15 +312,42 @@ Partial Class FormGaji
         'GroupBoxRecord
         '
         Me.GroupBoxRecord.AutoSize = True
+        Me.GroupBoxRecord.Controls.Add(Me.LabelKasbon)
         Me.GroupBoxRecord.Controls.Add(Me.LabelTotal)
+        Me.GroupBoxRecord.Controls.Add(Me.LabelBonus)
         Me.GroupBoxRecord.Controls.Add(Me.Label5)
+        Me.GroupBoxRecord.Controls.Add(Me.Label10)
         Me.GroupBoxRecord.Controls.Add(Me.DataGridViewRecord)
-        Me.GroupBoxRecord.Location = New System.Drawing.Point(520, 72)
+        Me.GroupBoxRecord.Controls.Add(Me.Label11)
+        Me.GroupBoxRecord.Controls.Add(Me.Label8)
+        Me.GroupBoxRecord.Controls.Add(Me.LabelIDPegawai)
+        Me.GroupBoxRecord.Controls.Add(Me.Label7)
+        Me.GroupBoxRecord.Controls.Add(Me.LabelNamaPegawai)
+        Me.GroupBoxRecord.Location = New System.Drawing.Point(787, 137)
         Me.GroupBoxRecord.Name = "GroupBoxRecord"
-        Me.GroupBoxRecord.Size = New System.Drawing.Size(367, 417)
+        Me.GroupBoxRecord.Size = New System.Drawing.Size(426, 542)
         Me.GroupBoxRecord.TabIndex = 89
         Me.GroupBoxRecord.TabStop = False
         Me.GroupBoxRecord.Text = "Data Record Pegawai"
+        '
+        'LabelTotal
+        '
+        Me.LabelTotal.AutoSize = True
+        Me.LabelTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelTotal.Location = New System.Drawing.Point(356, 507)
+        Me.LabelTotal.Name = "LabelTotal"
+        Me.LabelTotal.Size = New System.Drawing.Size(0, 18)
+        Me.LabelTotal.TabIndex = 40
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(285, 507)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(75, 18)
+        Me.Label5.TabIndex = 39
+        Me.Label5.Text = "TOTAL : "
         '
         'DataGridViewRecord
         '
@@ -350,11 +358,11 @@ Partial Class FormGaji
         Me.DataGridViewRecord.BackgroundColor = System.Drawing.Color.White
         Me.DataGridViewRecord.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewRecord.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnNo, Me.ColumnNamaProduk, Me.ColumnKeterangan, Me.ColumnTotal})
-        Me.DataGridViewRecord.Location = New System.Drawing.Point(15, 26)
+        Me.DataGridViewRecord.Location = New System.Drawing.Point(24, 95)
         Me.DataGridViewRecord.Name = "DataGridViewRecord"
         Me.DataGridViewRecord.ReadOnly = True
         Me.DataGridViewRecord.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridViewRecord.Size = New System.Drawing.Size(340, 351)
+        Me.DataGridViewRecord.Size = New System.Drawing.Size(391, 382)
         Me.DataGridViewRecord.TabIndex = 1
         '
         'ColumnNo
@@ -384,40 +392,19 @@ Partial Class FormGaji
         Me.ColumnTotal.ReadOnly = True
         Me.ColumnTotal.Width = 56
         '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(181, 383)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(75, 18)
-        Me.Label5.TabIndex = 39
-        Me.Label5.Text = "TOTAL : "
-        '
-        'LabelTotal
-        '
-        Me.LabelTotal.AutoSize = True
-        Me.LabelTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelTotal.Location = New System.Drawing.Point(252, 383)
-        Me.LabelTotal.Name = "LabelTotal"
-        Me.LabelTotal.Size = New System.Drawing.Size(0, 18)
-        Me.LabelTotal.TabIndex = 40
-        '
         'FormGaji
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(909, 522)
+        Me.ClientSize = New System.Drawing.Size(1370, 726)
         Me.Controls.Add(Me.GroupBoxRecord)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label6)
         Me.Name = "FormGaji"
         Me.Text = "Form Gaji"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
@@ -432,7 +419,6 @@ Partial Class FormGaji
 
     End Sub
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents LabelKasbon As System.Windows.Forms.Label
     Friend WithEvents LabelBonus As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label

@@ -11,7 +11,7 @@
     Sub AutoCompletePegawai()
         Dim query As String = "SELECT [ID_Pegawai],[Nama_Pegawai] FROM Pegawai WHERE IsDeleted != 1"
         AutoComplete(query, ComboPegawai, "Nama_Pegawai", "ID_Pegawai")
-        AutoComplete(query, ComboCariPegawai, "Nama_Pegawai", "ID_Pegawai")
+
 
     End Sub
 
@@ -29,7 +29,7 @@
         LabelStatus.Text = "Add"
     End Sub
 
-    Private Sub ButtonSave_Click(sender As Object, e As EventArgs)
+    Private Sub ButtonSave_Click(sender As Object, e As EventArgs) Handles ButtonSave.Click
         Dim query As String = String.Empty
         Dim label As String = String.Empty
         Dim output As Integer
