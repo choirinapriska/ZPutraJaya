@@ -1,11 +1,14 @@
-﻿Public Class FormTabungan
-    Sub ShowTabungan(ByVal id As String)
+﻿Public Class FormKasbon
+
+
+
+    Sub ShowKasbon(ByVal id As String)
         Dim where As String = String.Empty
 
         If id <> String.Empty Then
             where = " AND A.ID_Pegawai = '" + id + "'"
         End If
-        DataGridTabungan.DataSource = showTable("SELECT A.ID_Tabungan, B.Nama_Pegawai, A.Jumlah, A.AddedBy, A.DateAdded, A.ModifiedDate, A.ID_Pegawai FROM dbo.Tabungan AS A  INNER JOIN dbo.Pegawai AS B ON A.ID_Pegawai = B.ID_Pegawai WHERE A.IsDeleted !=1" + where)
+        DataGridKasbon.DataSource = showTable("SELECT A.ID_Kasbon, B.Nama_Pegawai, A.Jumlah, A.AddedBy, A.DateAdded, A.ModifiedDate, A.ID_Pegawai FROM dbo.Kasbon AS A  INNER JOIN dbo.Pegawai AS B ON A.ID_Pegawai = B.ID_Pegawai WHERE A.IsDeleted !=1" + where)
     End Sub
 
     Sub AutoCompletePegawai()
@@ -15,35 +18,16 @@
     End Sub
 
     Sub ResetForm()
+        Dim dt As Date = Date.Now
+        LabelTanggal.Text = dt.ToString()
         AutoCompletePegawai()
         TextBoxJumlah.Text = String.Empty
-        ShowTabungan(String.Empty)
+        ShowKasbon(String.Empty)
         LabelStatus.Text = "Add"
     End Sub
 
-    Private Sub FormTabungan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub FormKasbon_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ResetForm()
-    End Sub
-
-    Private Sub TextBoxJumlah_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxJumlah.KeyPress
-        If Asc(e.KeyChar) <> 8 Then
-            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
-                e.Handled = True
-            End If
-        End If
-    End Sub
-
-    Private Sub DataGridTabungan_Click(sender As Object, e As EventArgs) Handles DataGridTabungan.Click
-        LabelIDData.Text = DataGridTabungan.CurrentRow.Cells(0).Value
-    End Sub
-
-    Private Sub DataGridTabungan_DoubleClick(sender As Object, e As EventArgs) Handles DataGridTabungan.DoubleClick
-        Dim data As DataGridViewRow = DataGridTabungan.CurrentRow
-
-        LabelStatus.Text = "Edit"
-
-        ComboPegawai.SelectedValue = data.Cells(6).Value
-        TextBoxJumlah.Text = data.Cells(2).Value
     End Sub
 
     Private Sub ButtonSave_Click(sender As Object, e As EventArgs) Handles ButtonSave.Click
@@ -59,7 +43,7 @@
 
         If LabelStatus.Text = "Add" Then
 
-            query = "INSERT INTO [dbo].[Tabungan]" +
+            query = "INSERT INTO [dbo].[Kasbon]" +
                         "([ID_Pegawai]" +
                         ",[Jumlah]" +
                         ",[DateAdded]" +
@@ -68,17 +52,17 @@
                     "VALUES" +
                         "('" + Pegawai + "'" +
                         ",'" + TextBoxJumlah.Text + "'" +
-                        ",'" + dt.ToString() + "'" +
+                        ",GETDATE() " +
                         ",0,'Admin') "
 
             label = "Data berhasil ditambahkan"
 
         ElseIf LabelStatus.Text = "Edit" Then
-            query = "UPDATE [dbo].[Tabungan]" +
+            query = "UPDATE [dbo].[Kasbon]" +
                         "SET [ID_Pegawai] = '" + Pegawai + "'" +
                             ",[Jumlah] = '" + TextBoxJumlah.Text + "'" +
-                            ",[ModifiedDate] = '" + dt.ToString() + "'" +
-                        "WHERE ID_Tabungan = " + LabelIDData.Text + ""
+                            ",[ModifiedDate] = GETDATE() " +
+                        "WHERE ID_Kasbon = " + LabelIDData.Text + ""
 
             label = "Data ID : " + LabelIDData.Text + " berhasil diubah"
         End If
@@ -88,13 +72,34 @@
         If (output = 1) Then
             MsgBox(label)
             ResetForm()
-            ShowTabungan(String.Empty)
+            ShowKasbon(String.Empty)
         End If
+    End Sub
+
+    Private Sub TextBoxJumlah_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxJumlah.KeyPress
+        If Asc(e.KeyChar) <> 8 Then
+            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
+                e.Handled = True
+            End If
+        End If
+    End Sub
+
+    Private Sub DataGridKasbon_Click(sender As Object, e As EventArgs)
+        LabelIDData.Text = DataGridKasbon.CurrentRow.Cells(0).Value
+    End Sub
+
+    Private Sub DataGridKasbon_DoubleClick(sender As Object, e As EventArgs)
+        Dim data As DataGridViewRow = DataGridKasbon.CurrentRow
+
+        LabelStatus.Text = "Edit"
+
+        ComboPegawai.SelectedValue = data.Cells(6).Value
+        TextBoxJumlah.Text = data.Cells(2).Value
     End Sub
 
     Private Sub ComboPegawai_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboPegawai.SelectedIndexChanged
         Dim id As String = CType(ComboPegawai.SelectedItem, DataRowView).Row.Item("ID_Pegawai").ToString
-        ShowTabungan(id)
+        ShowKasbon(id)
         If id <> String.Empty Then
             LabelIDPegawai.Text = id
             LabelNamaPegawai.Text = CType(ComboPegawai.SelectedItem, DataRowView).Row.Item("Nama_Pegawai").ToString

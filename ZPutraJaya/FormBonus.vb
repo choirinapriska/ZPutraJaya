@@ -1,11 +1,11 @@
-﻿Public Class FormTabungan
-    Sub ShowTabungan(ByVal id As String)
+﻿Public Class FormBonus
+    Sub ShowBonus(ByVal id As String)
         Dim where As String = String.Empty
 
         If id <> String.Empty Then
             where = " AND A.ID_Pegawai = '" + id + "'"
         End If
-        DataGridTabungan.DataSource = showTable("SELECT A.ID_Tabungan, B.Nama_Pegawai, A.Jumlah, A.AddedBy, A.DateAdded, A.ModifiedDate, A.ID_Pegawai FROM dbo.Tabungan AS A  INNER JOIN dbo.Pegawai AS B ON A.ID_Pegawai = B.ID_Pegawai WHERE A.IsDeleted !=1" + where)
+        DataGridBonus.DataSource = showTable("SELECT A.ID_Bonus, B.Nama_Pegawai, A.Jumlah, A.AddedBy, A.DateAdded, A.ModifiedDate, A.ID_Pegawai FROM dbo.Bonus AS A  INNER JOIN dbo.Pegawai AS B ON A.ID_Pegawai = B.ID_Pegawai WHERE A.IsDeleted !=1" + where)
     End Sub
 
     Sub AutoCompletePegawai()
@@ -17,11 +17,11 @@
     Sub ResetForm()
         AutoCompletePegawai()
         TextBoxJumlah.Text = String.Empty
-        ShowTabungan(String.Empty)
+        ShowBonus(String.Empty)
         LabelStatus.Text = "Add"
     End Sub
-
-    Private Sub FormTabungan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+ 
+    Private Sub FormBonus_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ResetForm()
     End Sub
 
@@ -33,12 +33,12 @@
         End If
     End Sub
 
-    Private Sub DataGridTabungan_Click(sender As Object, e As EventArgs) Handles DataGridTabungan.Click
-        LabelIDData.Text = DataGridTabungan.CurrentRow.Cells(0).Value
+    Private Sub DataGridBonus_Click(sender As Object, e As EventArgs) Handles DataGridBonus.Click
+        LabelIDData.Text = DataGridBonus.CurrentRow.Cells(0).Value
     End Sub
 
-    Private Sub DataGridTabungan_DoubleClick(sender As Object, e As EventArgs) Handles DataGridTabungan.DoubleClick
-        Dim data As DataGridViewRow = DataGridTabungan.CurrentRow
+    Private Sub DataGridBonus_DoubleClick(sender As Object, e As EventArgs) Handles DataGridBonus.DoubleClick
+        Dim data As DataGridViewRow = DataGridBonus.CurrentRow
 
         LabelStatus.Text = "Edit"
 
@@ -59,7 +59,7 @@
 
         If LabelStatus.Text = "Add" Then
 
-            query = "INSERT INTO [dbo].[Tabungan]" +
+            query = "INSERT INTO [dbo].[Bonus]" +
                         "([ID_Pegawai]" +
                         ",[Jumlah]" +
                         ",[DateAdded]" +
@@ -74,11 +74,11 @@
             label = "Data berhasil ditambahkan"
 
         ElseIf LabelStatus.Text = "Edit" Then
-            query = "UPDATE [dbo].[Tabungan]" +
+            query = "UPDATE [dbo].[Bonus]" +
                         "SET [ID_Pegawai] = '" + Pegawai + "'" +
                             ",[Jumlah] = '" + TextBoxJumlah.Text + "'" +
                             ",[ModifiedDate] = '" + dt.ToString() + "'" +
-                        "WHERE ID_Tabungan = " + LabelIDData.Text + ""
+                        "WHERE ID_Bonus = " + LabelIDData.Text + ""
 
             label = "Data ID : " + LabelIDData.Text + " berhasil diubah"
         End If
@@ -88,13 +88,13 @@
         If (output = 1) Then
             MsgBox(label)
             ResetForm()
-            ShowTabungan(String.Empty)
+            ShowBonus(String.Empty)
         End If
     End Sub
 
     Private Sub ComboPegawai_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboPegawai.SelectedIndexChanged
         Dim id As String = CType(ComboPegawai.SelectedItem, DataRowView).Row.Item("ID_Pegawai").ToString
-        ShowTabungan(id)
+        ShowBonus(id)
         If id <> String.Empty Then
             LabelIDPegawai.Text = id
             LabelNamaPegawai.Text = CType(ComboPegawai.SelectedItem, DataRowView).Row.Item("Nama_Pegawai").ToString

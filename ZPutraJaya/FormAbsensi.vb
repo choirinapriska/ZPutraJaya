@@ -1,25 +1,18 @@
 ﻿Public Class FormAbsensi
-    Sub ShowAbsensi()
-        DataGridAbsensi.DataSource = showTable("SELECT * FROM [dbo].[Absensi]")
+    Private c As Integer
+
+    Sub ShowAbsensi(Optional ByVal query As String = "")
+        If query = "" Then
+            query = "SELECT A.ID_Absensi, Nama_Pegawai , Keterangan , A.DateAdded  FROM Absensi AS A INNER JOIN Pegawai AS B ON A.ID_Pegawai = B.ID_Pegawai "
+        End If
+
+        DataGridAbsensi.DataSource = showTable(query)
     End Sub
     Sub AutoCompletePegawai()
-        Dim pegawaiData As DataTable = showTable("SELECT [ID_Pegawai],[Nama_Pegawai] FROM Pegawai WHERE IsDeleted != 1")
-        Dim colPegawai As New AutoCompleteStringCollection
+        Dim query As String = "SELECT [ID_Pegawai],[Nama_Pegawai] FROM Pegawai WHERE IsDeleted != 1"
+        AutoComplete(query, ComboPegawai, "Nama_Pegawai", "ID_Pegawai")
+        AutoComplete(query, ComboCariPegawai, "Nama_Pegawai", "ID_Pegawai")
 
-        Dim PegawaiRow As DataRow = pegawaiData.NewRow
-        PegawaiRow("Nama_Pegawai") = "-----Pilih-----"
-        PegawaiRow("ID_Pegawai") = ""
-        pegawaiData.Rows.InsertAt(PegawaiRow, 0)
-
-        ComboPegawai.DataSource = pegawaiData
-        ComboPegawai.DisplayMember = "Nama_Pegawai"
-        ComboPegawai.ValueMember = "ID_Pegawai"
-
-        For i = 0 To pegawaiData.Rows.Count - 1
-            colPegawai.Add(pegawaiData.Rows(i)("Nama_Pegawai").ToString())
-        Next
-
-        ComboPegawai.AutoCompleteCustomSource = colPegawai
     End Sub
 
     Sub ResetForm()
@@ -35,8 +28,8 @@
         LabelStatus.Visible = False
         LabelStatus.Text = "Add"
     End Sub
-     
-    Private Sub ButtonSave_Click(sender As Object, e As EventArgs) Handles ButtonSave.Click
+
+    Private Sub ButtonSave_Click(sender As Object, e As EventArgs)
         Dim query As String = String.Empty
         Dim label As String = String.Empty
         Dim output As Integer
@@ -84,7 +77,6 @@
     End Sub
 
     Private Sub DataGridAbsensi_Click(sender As Object, e As EventArgs) Handles DataGridAbsensi.Click
-        ButtonDelete.Visible = True
         LabelIDData.Text = DataGridAbsensi.CurrentRow.Cells(0).Value
     End Sub
 
@@ -98,26 +90,13 @@
         ComboKeterangan.SelectedItem = data.Cells(3).Value
     End Sub
 
-    Private Sub ButtonDelete_Click(sender As Object, e As EventArgs) Handles ButtonDelete.Click
-        Dim query As String
-        Dim dt As DateTime = DateTime.Now
-        Dim output As Integer
-        Dim result As Integer = MessageBox.Show("Hapus Data ID : " + LabelIDData.Text + " ? ", "Delete Data " + LabelIDData.Text + "", MessageBoxButtons.YesNo)
+    Private Sub ComboCariPegawai_SelectedIndexChanged(sender As Object, e As EventArgs)
+        Dim id As String = CType(ComboPegawai.SelectedItem, DataRowView).Row.Item("ID_Pegawai").ToString
+        ShowAbsensi("SELECT A.ID_Absensi, Nama_Pegawai , Keterangan , A.DateAdded  FROM Absensi AS A INNER JOIN Pegawai AS B ON A.ID_Pegawai = B.ID_Pegawai WHERE A.ID_Pegawai = '" + id + "' ")
 
-        If result = DialogResult.Yes Then
-            query = "UPDATE [dbo].[Absensi]" +
-                           "SET  " +
-                              "[ModifiedDate] = '" + dt.ToString() + "'" +
-                              ",[IsDeleted] = 1" +
-                         "WHERE ID_Absensi = " + LabelIDData.Text + ""
-            Console.WriteLine(query)
-            output = ActionQuery(query)
+    End Sub
 
-            If (output = 1) Then
-                MsgBox("Data ID :  " + LabelIDData.Text + " berhasil dihapus")
-                ResetForm()
-                ShowAbsensi()
-            End If
-        End If
+    Private Sub ButtonCari_Click(sender As Object, e As EventArgs)
+
     End Sub
 End Class

@@ -14,3 +14,5 @@ E:\PENTING\Kerja\Penggajian\ZPutraJaya\ZPutraJaya\obj\Debug\ZPutraJaya.pdb
 E:\PENTING\Kerja\Penggajian\ZPutraJaya\ZPutraJaya\obj\Debug\ZPutraJaya.FormRecordPekerja.resources
 E:\PENTING\Kerja\Penggajian\ZPutraJaya\ZPutraJaya\obj\Debug\ZPutraJaya.FormGaji.resources
 E:\PENTING\Kerja\Penggajian\ZPutraJaya\ZPutraJaya\obj\Debug\ZPutraJaya.FormTabungan.resources
+E:\PENTING\Kerja\Penggajian\ZPutraJaya\ZPutraJaya\obj\Debug\ZPutraJaya.FormKasbon.resources
+E:\PENTING\Kerja\Penggajian\ZPutraJaya\ZPutraJaya\obj\Debug\ZPutraJaya.FormBonus.resources

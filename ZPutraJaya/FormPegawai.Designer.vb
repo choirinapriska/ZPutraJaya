@@ -43,7 +43,7 @@ Partial Class FormPegawai
         'Text_IDPegawai
         '
         Me.Text_IDPegawai.Enabled = False
-        Me.Text_IDPegawai.Location = New System.Drawing.Point(186, 110)
+        Me.Text_IDPegawai.Location = New System.Drawing.Point(179, 72)
         Me.Text_IDPegawai.Name = "Text_IDPegawai"
         Me.Text_IDPegawai.Size = New System.Drawing.Size(137, 20)
         Me.Text_IDPegawai.TabIndex = 12
@@ -51,7 +51,7 @@ Partial Class FormPegawai
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(54, 110)
+        Me.Label1.Location = New System.Drawing.Point(47, 72)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(18, 13)
         Me.Label1.TabIndex = 11
@@ -59,7 +59,7 @@ Partial Class FormPegawai
         '
         'TextNamaPegawai
         '
-        Me.TextNamaPegawai.Location = New System.Drawing.Point(186, 147)
+        Me.TextNamaPegawai.Location = New System.Drawing.Point(179, 109)
         Me.TextNamaPegawai.Name = "TextNamaPegawai"
         Me.TextNamaPegawai.Size = New System.Drawing.Size(137, 20)
         Me.TextNamaPegawai.TabIndex = 14
@@ -67,7 +67,7 @@ Partial Class FormPegawai
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(54, 147)
+        Me.Label2.Location = New System.Drawing.Point(47, 109)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(79, 13)
         Me.Label2.TabIndex = 13
@@ -76,7 +76,7 @@ Partial Class FormPegawai
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(54, 217)
+        Me.Label3.Location = New System.Drawing.Point(47, 179)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(83, 13)
         Me.Label3.TabIndex = 15
@@ -84,7 +84,7 @@ Partial Class FormPegawai
         '
         'TextBoxAlamatPegawai
         '
-        Me.TextBoxAlamatPegawai.Location = New System.Drawing.Point(186, 214)
+        Me.TextBoxAlamatPegawai.Location = New System.Drawing.Point(179, 176)
         Me.TextBoxAlamatPegawai.Name = "TextBoxAlamatPegawai"
         Me.TextBoxAlamatPegawai.Size = New System.Drawing.Size(239, 60)
         Me.TextBoxAlamatPegawai.TabIndex = 16
@@ -93,7 +93,7 @@ Partial Class FormPegawai
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(54, 183)
+        Me.Label4.Location = New System.Drawing.Point(47, 145)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(75, 13)
         Me.Label4.TabIndex = 17
@@ -103,14 +103,14 @@ Partial Class FormPegawai
         '
         Me.ComboJenisPegawai.FormattingEnabled = True
         Me.ComboJenisPegawai.Items.AddRange(New Object() {"Borongan ", "Harian"})
-        Me.ComboJenisPegawai.Location = New System.Drawing.Point(186, 183)
+        Me.ComboJenisPegawai.Location = New System.Drawing.Point(179, 145)
         Me.ComboJenisPegawai.Name = "ComboJenisPegawai"
         Me.ComboJenisPegawai.Size = New System.Drawing.Size(137, 21)
         Me.ComboJenisPegawai.TabIndex = 18
         '
         'ButtonSave
         '
-        Me.ButtonSave.Location = New System.Drawing.Point(350, 293)
+        Me.ButtonSave.Location = New System.Drawing.Point(441, 213)
         Me.ButtonSave.Name = "ButtonSave"
         Me.ButtonSave.Size = New System.Drawing.Size(75, 23)
         Me.ButtonSave.TabIndex = 19
@@ -121,7 +121,7 @@ Partial Class FormPegawai
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!)
-        Me.Label6.Location = New System.Drawing.Point(386, 23)
+        Me.Label6.Location = New System.Drawing.Point(77, 9)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(207, 46)
         Me.Label6.TabIndex = 20
@@ -133,16 +133,16 @@ Partial Class FormPegawai
         Me.DataGridPegawai.AllowUserToDeleteRows = False
         Me.DataGridPegawai.AllowUserToOrderColumns = True
         Me.DataGridPegawai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridPegawai.Location = New System.Drawing.Point(454, 95)
+        Me.DataGridPegawai.Location = New System.Drawing.Point(40, 256)
         Me.DataGridPegawai.Name = "DataGridPegawai"
         Me.DataGridPegawai.ReadOnly = True
-        Me.DataGridPegawai.Size = New System.Drawing.Size(489, 356)
+        Me.DataGridPegawai.Size = New System.Drawing.Size(553, 212)
         Me.DataGridPegawai.TabIndex = 33
         '
         'LabelIDData
         '
         Me.LabelIDData.AutoSize = True
-        Me.LabelIDData.Location = New System.Drawing.Point(496, 479)
+        Me.LabelIDData.Location = New System.Drawing.Point(92, 517)
         Me.LabelIDData.Name = "LabelIDData"
         Me.LabelIDData.Size = New System.Drawing.Size(0, 13)
         Me.LabelIDData.TabIndex = 40
@@ -150,7 +150,7 @@ Partial Class FormPegawai
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(451, 479)
+        Me.Label5.Location = New System.Drawing.Point(47, 517)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(27, 13)
         Me.Label5.TabIndex = 39
@@ -158,7 +158,7 @@ Partial Class FormPegawai
         '
         'ButtonDelete
         '
-        Me.ButtonDelete.Location = New System.Drawing.Point(868, 479)
+        Me.ButtonDelete.Location = New System.Drawing.Point(464, 517)
         Me.ButtonDelete.Name = "ButtonDelete"
         Me.ButtonDelete.Size = New System.Drawing.Size(75, 23)
         Me.ButtonDelete.TabIndex = 38
@@ -169,7 +169,7 @@ Partial Class FormPegawai
         'LabelStatus
         '
         Me.LabelStatus.AutoSize = True
-        Me.LabelStatus.Location = New System.Drawing.Point(852, 468)
+        Me.LabelStatus.Location = New System.Drawing.Point(448, 506)
         Me.LabelStatus.Name = "LabelStatus"
         Me.LabelStatus.Size = New System.Drawing.Size(0, 13)
         Me.LabelStatus.TabIndex = 37
@@ -178,7 +178,7 @@ Partial Class FormPegawai
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(967, 548)
+        Me.ClientSize = New System.Drawing.Size(613, 557)
         Me.Controls.Add(Me.LabelIDData)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.ButtonDelete)

@@ -90,4 +90,24 @@
         Return dtname
     End Function
 
+    Sub AutoComplete(ByVal query As String, ByVal element As ComboBox, ByVal Display As String, ByVal Value As String)
+        Dim Data As DataTable = showTable(query)
+        Dim cm As New AutoCompleteStringCollection
+
+        Dim rw As DataRow = Data.NewRow
+        rw(Display) = "-----Pilih-----"
+        rw(Value) = ""
+        Data.Rows.InsertAt(rw, 0)
+
+        element.DataSource = Data
+        element.DisplayMember = Display
+        element.ValueMember = Value
+
+        For i = 0 To Data.Rows.Count - 1
+            cm.Add(Data.Rows(i)(Display).ToString())
+        Next
+
+        element.AutoCompleteCustomSource = cm
+    End Sub
+
 End Module

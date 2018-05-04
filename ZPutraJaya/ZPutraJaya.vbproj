@@ -45,6 +45,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
@@ -80,10 +83,22 @@
       <DependentUpon>FormAbsensi.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormBonus.Designer.vb">
+      <DependentUpon>FormBonus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormBonus.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormGaji.Designer.vb">
       <DependentUpon>FormGaji.vb</DependentUpon>
     </Compile>
     <Compile Include="FormGaji.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKasbon.Designer.vb">
+      <DependentUpon>FormKasbon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormKasbon.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormPegawai.Designer.vb">
@@ -137,8 +152,14 @@
     <EmbeddedResource Include="FormAbsensi.resx">
       <DependentUpon>FormAbsensi.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormBonus.resx">
+      <DependentUpon>FormBonus.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormGaji.resx">
       <DependentUpon>FormGaji.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKasbon.resx">
+      <DependentUpon>FormKasbon.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPegawai.resx">
       <DependentUpon>FormPegawai.vb</DependentUpon>
@@ -160,6 +181,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
